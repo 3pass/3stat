@@ -15,6 +15,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@3pass/dcl-banner@workspace:items/banner":
+  version: 0.0.0-use.local
+  resolution: "@3pass/dcl-banner@workspace:items/banner"
+  dependencies:
+    decentraland-builder-scripts: ^0.24.0
+    decentraland-ecs: ^6.9.1
+  languageName: unknown
+  linkType: soft
+
 "@assemblyscript/loader@npm:^0.9.4":
   version: 0.9.4
   resolution: "@assemblyscript/loader@npm:0.9.4"
@@ -2275,7 +2284,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decentraland-ecs@npm:^6.9.1":
+"decentraland-builder-scripts@npm:^0.24.0":
+  version: 0.24.0
+  resolution: "decentraland-builder-scripts@npm:0.24.0"
+  dependencies:
+    decentraland-ecs: ^6.1.4
+  checksum: 6021cb6ce261e3fd9d6741d8126ec88776d9a93b3645316ec849ac223512a542c6690ae946a46362f990b6e873d0d6cf542c0622df4fd35d4d446d08f5d650d2
+  languageName: node
+  linkType: hard
+
+"decentraland-ecs@npm:^6.1.4, decentraland-ecs@npm:^6.9.1":
   version: 6.9.1
   resolution: "decentraland-ecs@npm:6.9.1"
   dependencies:

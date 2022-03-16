@@ -6,3 +6,9 @@
 !.yarn/sdks
 !.yarn/versions
 node_modules
+
+
+# Smart Items
+build-items.sh
+items
+dist
