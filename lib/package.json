@@ -1,0 +1,7 @@
+{
+  "name": "lib",
+  "packageManager": "yarn@3.2.0",
+  "dependencies": {
+    "decentraland": "^3.9.0"
+  }
+}
