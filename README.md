@@ -1,7 +1,6 @@
 # 3stat
 
-3stat provides an easy to use and comprehensive analytics solution for
-Decentraland
+3stat is a Metaverse analytics service offered by 3pass that tracks and reports activities around your virtual land.
 
 Visit [dashboard.3pass.app](https://dashboard.3pass.app) to try it out
 
