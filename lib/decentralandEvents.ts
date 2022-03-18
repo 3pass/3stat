@@ -1,6 +1,6 @@
 import { fireEvent } from './fireEvent'
 import { getParcel } from '@decentraland/ParcelIdentity'
-
+import { registerBasicTracking } from './pixelTracking'
 
 export const registerDclEvents = async () => {
 
@@ -11,6 +11,7 @@ export const registerDclEvents = async () => {
     const { cid: parcelId } = parcel
     const itemId = 'dcl:' + parcel.land.sceneJsonData.scene.base
 
+    // event tracking
     onEnterSceneObservable.add(async (player) => {
         enterTime = Date.now()
         log('enter!!!')
@@ -31,6 +32,8 @@ export const registerDclEvents = async () => {
         const duration = Math.floor(Date.now() - connectionTime)
         fireEvent('connectionDuration', {itemId, duration})
     })
+
+    registerBasicTracking()
 
     return {parcelId, itemId}
 }
