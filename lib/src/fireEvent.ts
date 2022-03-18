@@ -1,5 +1,5 @@
 import { getUserData } from "@decentraland/Identity"
-import { getCurrentRealm, getPlatform } from "@decentraland/EnvironmentAPI"
+import { getCurrentRealm, getPlatform } from '@decentraland/EnvironmentAPI'
 
 const url = `https://europe-west3-backend-339310.cloudfunctions.net/customEvent`
 const eventVersion = 'dcl-v00'

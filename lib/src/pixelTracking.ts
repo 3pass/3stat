@@ -1,9 +1,9 @@
-export const registerBasicTracking = () =>  {
+export const registerBasicTracking = (itemId: string) =>  {
   // TODO base url as ENV variable
-  const cloudServerBaseUrl = "https://europe-west3-backend-339310.cloudfunctions.net"
+  const cloudServerBaseUrl = `https://europe-west3-backend-339310.cloudfunctions.net`
 
   // TODO create default imageId
-  const trackingUrl = `${cloudServerBaseUrl}/serve/dcl:-24,30.jpg`
+  const trackingUrl = `${cloudServerBaseUrl}/serve/${itemId}.jpg`
 
   const pixel = new Entity()
   const material = new BasicMaterial()

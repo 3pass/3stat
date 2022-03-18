@@ -33,7 +33,7 @@ export const registerDclEvents = async () => {
         fireEvent('connectionDuration', {itemId, duration})
     })
 
-    registerBasicTracking()
+    registerBasicTracking(itemId)
 
     return {parcelId, itemId}
 }

@@ -1,1 +1,1 @@
-export { registerDclEvents } from './decentralandEvents'
+export { registerDclEvents } from './src/decentralandEvents'

@@ -12,9 +12,9 @@ export default class AnalyticBanner {
 
 
         const parcel = await getParcel()
-        const { cid: parcelId } = parcel
+        // const { cid: parcelId } = parcel
         const baseParcel = parcel.land.sceneJsonData.scene.base
-        log({baseParcel, parcelId})
+        // log({baseParcel, parcelId})
 
 
         // const itemId = baseParcel.replace('-','m')
@@ -45,7 +45,7 @@ export default class AnalyticBanner {
     }
 
     spawn(host: Entity) {
-        log('hello from spawn!!!')
+        // log('hello from spawn!!!')
         this.renderBanner(host)
     }
 }
