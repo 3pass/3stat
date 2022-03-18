@@ -1,14 +1,25 @@
-.pnp.*
+# Yarn
 .yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+.pnp.*
+.yarnrc.yml
+yarn.lock
+
+# Node
 node_modules
 
+# Firebase
+firebase-debug.log
+
+# IntelliJ
+.idea
 
 # Smart Items
 build-items.sh
 items
 dist
+
+# Project files
+tsconfig.json
+build.mjs
+.editorconfig
+lib

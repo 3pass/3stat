@@ -1,6 +1,6 @@
 {
   "name": "@3pass/3stat",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./index.js",
   "scripts": {
     "test": "echo ok!",
