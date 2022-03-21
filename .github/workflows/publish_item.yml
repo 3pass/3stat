@@ -27,10 +27,12 @@ jobs:
     steps:
       - name: Install node modules
         id: 'install-node-modules'
+        uses: ./
         run: 'yarn install'
 
       - name: Pack item
         id: 'pack-item'
+        uses: ./
         run: "yarn run item ${{ github.event.inputs.item }}"
 
       - name: Authenticate with Google Cloud service
