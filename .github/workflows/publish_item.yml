@@ -33,6 +33,10 @@ jobs:
         id: 'install-node-modules'
         run: 'yarn install'
 
+      - name: Install DCL globally
+        id: 'install-dcl'
+        run: 'npm install -g decentraland'
+
       - name: Pack item
         id: 'pack-item'
         run: 'yarn run item banner'
