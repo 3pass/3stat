@@ -31,7 +31,9 @@ jobs:
 
       - name: Pack item
         id: 'pack-item'
-        run: 'yarn run item banner'
+        uses: Adzz/jest_test_action@v1.0.0
+        with:
+          command: 'item banner'
 
       - name: Authenticate with Google Cloud service
         id: 'auth'
