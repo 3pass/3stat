@@ -24,10 +24,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./3stat/3stat
-
     steps:
       - name: Install node modules
         id: 'install-node-modules'
@@ -48,6 +44,6 @@ jobs:
         id: 'upload-item'
         uses: 'google-github-actions/upload-cloud-storage@v0'
         with:
-          path: "./3stat/3stat/dist/${{ github.event.inputs.item }}.zip"
+          path: "dist/${{ github.event.inputs.item }}.zip"
           destination: "3stats/dcl-smart-items/${{ github.event.inputs.item }}.zip"
 
