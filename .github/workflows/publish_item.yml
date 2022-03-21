@@ -35,7 +35,7 @@ jobs:
 
       - name: Pack item
         id: 'pack-item'
-        run: "yarn run item ${{ github.event.inputs.item }}"
+        run: "./build_items.sh ${{ github.event.inputs.item }}"
 
       - name: Authenticate with Google Cloud service
         id: 'auth'
