@@ -2,4 +2,4 @@
 
 cd ./items/${1}
 dcl pack
-mv item.zip ../../dist/${1}.zip
+mv item.zip ../../${1}.zip

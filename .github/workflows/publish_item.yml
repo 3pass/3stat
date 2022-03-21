@@ -52,5 +52,5 @@ jobs:
         id: 'upload-item'
         uses: 'google-github-actions/upload-cloud-storage@v0'
         with:
-          path: "dist/banner.zip"
+          path: "banner.zip"
           destination: "3stats/dcl-smart-items/banner.zip"
