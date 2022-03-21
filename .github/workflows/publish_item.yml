@@ -25,13 +25,16 @@ jobs:
         working-directory: ./
 
     steps:
+      - name: Checkout repo
+        id: 'checkout-repo'
+        uses: actions/checkout@v2
+
       - name: Install node modules
         id: 'install-node-modules'
         run: 'yarn install'
 
       - name: Pack item
         id: 'pack-item'
-        uses: actions/checkout@v2
         run: 'yarn run item banner'
 
       - name: Authenticate with Google Cloud service
