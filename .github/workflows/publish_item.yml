@@ -41,10 +41,11 @@ jobs:
         id: 'pack-item'
         run: 'yarn run item banner'
 
-      - name: Authenticate with Google Cloud service
+      - name: 'Authenticate to Google Cloud'
         id: 'auth'
-        uses: 'google-github-actions/auth@v0'
+        uses: 'google-github-actions/auth@v0.6.0'
         with:
+          token_format: 'access_token'
           workload_identity_provider: 'projects/820318058476/locations/global/workloadIdentityPools/e9a7e8fcc4b4402ebc037973af174bdd/providers/github'
           service_account: 'backend-339310@820318058476.iam.geserviceaccount.com'
 
