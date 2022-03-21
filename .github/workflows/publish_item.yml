@@ -46,7 +46,7 @@ jobs:
         uses: 'google-github-actions/auth@v0'
         with:
           workload_identity_provider: 'projects/820318058476/locations/global/workloadIdentityPools/e9a7e8fcc4b4402ebc037973af174bdd/providers/github'
-          service_account: 'github@backend-339310.iam.geserviceaccount.com
+          service_account: 'github@backend-339310.iam.geserviceaccount.com'
 
       - name: Upload item to Google Cloud Storage
         id: 'upload-item'
