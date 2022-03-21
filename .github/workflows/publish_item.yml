@@ -22,6 +22,8 @@ jobs:
       contents: 'read'
       id-token: 'write'
 
+    runs-on: ubuntu-latest
+
     steps:
       - name: Pack item
         id: 'pack-item'
