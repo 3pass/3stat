@@ -1,0 +1,43 @@
+name: publish-item
+
+on:
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Define branch name'
+        required: true
+        default: 'main'
+      item:
+        description: 'Define item to pack'
+        required: true
+        default: 'banner'
+
+jobs:
+  job_id:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      - name: Pack item
+        id: 'pack-item'
+        run: 'npm run item ${{ github.event.inputs.item }}'
+
+      - name: Authenticate with Google Cloud service
+        id: 'auth'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          workload_identity_provider: 'projects/820318058476/locations/global/workloadIdentityPools/e9a7e8fcc4b4402ebc037973af174bdd/providers/github'
+          service_account: 'backend-339310@appspot.gserviceaccount.com'
+
+      - name: Upload item to Google Cloud Storage
+        id: 'upload-item'
+        uses: 'google-github-actions/upload-cloud-storage@v0'
+        with:
+          path: 'dist/#{{ github.event.inputs.item }}.zip'
+          destination: '3stats/dcl-smart-items/#{{ github.event.inputs.item }}.zip'
+
