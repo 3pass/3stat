@@ -1,4 +1,4 @@
-name: publish-item
+name: publish-banner
 
 on:
   push:
@@ -11,13 +11,9 @@ on:
         description: 'Define branch name'
         required: true
         default: 'main'
-      item:
-        description: 'Define item to pack'
-        required: true
-        default: 'banner'
 
 jobs:
-  publish-item:
+  publish-banner:
     permissions:
       contents: 'read'
       id-token: 'write'
@@ -35,7 +31,7 @@ jobs:
 
       - name: Pack item
         id: 'pack-item'
-        run: "./build_items.sh ${{ github.event.inputs.item }}"
+        run: 'yarn run item banner'
 
       - name: Authenticate with Google Cloud service
         id: 'auth'
@@ -48,6 +44,5 @@ jobs:
         id: 'upload-item'
         uses: 'google-github-actions/upload-cloud-storage@v0'
         with:
-          path: "dist/${{ github.event.inputs.item }}.zip"
-          destination: "3stats/dcl-smart-items/${{ github.event.inputs.item }}.zip"
-
+          path: "dist/banner.zip"
+          destination: "3stats/dcl-smart-items/banner.zip"
