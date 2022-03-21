@@ -17,4 +17,5 @@ firebase-debug.log
 .idea
 
 # Items
-dist/*
+dist/*.zip
+!dist/.keep
